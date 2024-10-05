@@ -11,5 +11,6 @@ RUN apk add --no-cache tzdata
 
 EXPOSE 1688/tcp
 
-CMD ["/usr/bin/vlmcsd", "-i", "/etc/vlmcsd/vlmcsd.ini"]
+ENTRYPOINT [ "/usr/bin/vlmcsd" ]
+CMD ["-i", "/etc/vlmcsd/vlmcsd.ini"]
 
